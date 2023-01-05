@@ -96,6 +96,7 @@ internal class Program
                 Console.WriteLine("                             -------------------- LIST OF USERS --------------------\n");
                 Console.ForegroundColor = ConsoleColor.White;
                 BaseCRUD.ListUsers();
+                UDMMenu:
                 ListMenu();
                 string updateUserById = Console.ReadLine();
                 switch (updateUserById)
@@ -210,7 +211,7 @@ internal class Program
                             else
                             {
                                 
-                                Console.WriteLine("Are you sure you want to delete the selected ID? Y/N (Yes/No)" + deleteId);
+                                Console.WriteLine("Are you sure you want to delete the selected ID? Y/N (Yes/No) " + "\n The id that will be deleted: " +  deleteId);
 
                                 string submitDelete = Console.ReadLine();
                                 switch (submitDelete)
@@ -249,6 +250,16 @@ internal class Program
                        
                 }
                 break;
+            case "S" or "s":
+                Console.Clear();
+                BaseCRUD.ListUsers();
+                Console.WriteLine("\n Enter in the search field:");
+                string search = Console.ReadLine();
+                Console.WriteLine("\n\n");
+                BaseCRUD.Searcher(search);
+                goto UDMMenu;
+
+                
             case "E" or "e":
                 Environment.Exit(0);
                 break;
@@ -303,17 +314,20 @@ internal class Program
         "                                               Ana Menü  => M");
     }
 
-    public static void ListMenu() {
+    public static void ListMenu()
+    {
 
-        Console.WriteLine("------------------------------------------------------------------------------------------------------------------"+
+        Console.WriteLine("------------------------------------------------------------------------------------------------------------------" +
             "\n\n                                               Kullanıcı Güncellen       => U  \n" +
             "                                               Kullanıcı Sil             => D\n" +
-            "                                               Ana Menü                  => M");
+            "                                               Ana Menü                  => M\n" +
+            "                                               Çıkmak İçin               => E");
+
 
     }
 
-    
-   
+
+
 
 }
 

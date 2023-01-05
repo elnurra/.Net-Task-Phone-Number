@@ -63,6 +63,16 @@ namespace FirstDataApp.CRUD
 
         }
 
+        public static void Searcher(string searcher)
+        {
+            UsersContext db = new();
+            var users = db.Users.Where(User => User.FirstName.Contains(searcher) || User.LastName.Contains(searcher) || User.Mail.Contains(searcher) || User.Phone.Contains(searcher));
+            foreach (var user in users)
+            {
+                Console.WriteLine($"{user.Id,-10} {user.FirstName,-30} {user.LastName,-30} {user.Mail,-30} {user.Phone}");
+            }
+        }
+
 
 
 

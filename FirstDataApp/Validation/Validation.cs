@@ -67,15 +67,16 @@ namespace FirstDataApp.Validation
 
         public static bool CheckerId(int ID)
         {
-            UsersContext db = new UsersContext();
+            UsersContext db = new();
             var updateUser = db.Users.Find(ID);
             if (updateUser is null)
             {
                 return true;
             } 
-                return false;
-            
+                return false;         
         }
+
+        
         
     }
 }
