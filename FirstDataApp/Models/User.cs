@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FirstDataApp.Models;
+namespace FirstDataApp;
 
 public partial class User
 {

@@ -3424,19 +3424,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Документы\\Code Academy\\BackEnd\\HomeWork\\Training\\FirstDataApp\\FirstDataApp.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\Code Academy\\BackEnd\\.NET Homeworks\\.Net-Task-Phone-Number\\FirstDataApp\\FirstDataApp.csproj",
       "projectName": "FirstDataApp",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Документы\\Code Academy\\BackEnd\\HomeWork\\Training\\FirstDataApp\\FirstDataApp.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\Документы\\Code Academy\\BackEnd\\HomeWork\\Training\\FirstDataApp\\obj\\",
+      "projectPath": "C:\\Users\\user\\Documents\\Code Academy\\BackEnd\\.NET Homeworks\\.Net-Task-Phone-Number\\FirstDataApp\\FirstDataApp.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Documents\\Code Academy\\BackEnd\\.NET Homeworks\\.Net-Task-Phone-Number\\FirstDataApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
