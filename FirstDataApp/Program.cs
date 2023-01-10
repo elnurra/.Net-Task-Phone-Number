@@ -58,7 +58,8 @@ internal class Program
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Phone number creating is empty or wrong pls input correctly: ");
+                    Console.WriteLine("Phone number creating is empty or wrong pls input correctly: " +
+                        "PS: Lenght should be equal 12!");
                     Console.ForegroundColor = ConsoleColor.Green;
 
                     goto Phone;
@@ -66,8 +67,8 @@ internal class Program
                 else
                 {
                     Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    BaseCRUD.UserAdd(name, surname, mail, phone);
+                    Console.ForegroundColor = ConsoleColor.Green;                   
+                    BaseCRUD.UserAdd(name, surname, mail, BaseCRUD.Converter(phone));
                     Console.ForegroundColor = ConsoleColor.White;
                 Minor:
                     MinorMenu();
@@ -325,6 +326,11 @@ internal class Program
 
 
     }
+    
+
+
+
+
 
 
 
@@ -361,23 +367,6 @@ internal class Program
 
 
 
-
-
-//UsersContext db = new UsersContext();
-
-//var usersFromDB = db.Users.ToList();
-//foreach (var user in usersFromDB)
-//{
-//    Console.WriteLine($"{user.FirstName,-10}{user.LastName,-15}{user.Mail,-30}{user.Phone,-30}");
-//}
-//Console.WriteLine("-----------------------------------------------LIST----------------------------------------------------------------");
-
-//var person =db.Users.Where(x=>x.Id==5).ToList();
-
-//foreach (var item in person)
-//{
-//    Console.WriteLine(item.FirstName);
-//}
 
 
 

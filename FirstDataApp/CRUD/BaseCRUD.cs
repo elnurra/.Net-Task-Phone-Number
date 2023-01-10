@@ -73,6 +73,12 @@ namespace FirstDataApp.CRUD
             }
         }
 
+        public static string Converter(string phone)
+        {
+            string result = "+" + phone.Substring(0, 2) + " (" + (phone.Substring(2, 3)) + ") " + (phone.Substring(5, 3)) + " " + (phone.Substring(8, 2)) + " " + (phone.Substring(phone.Length - 2));
+            return result;
+        }
+
 
 
 
