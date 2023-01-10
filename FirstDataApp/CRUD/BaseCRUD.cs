@@ -29,11 +29,11 @@ namespace FirstDataApp.CRUD
             
             UsersContext db = new UsersContext();
             var listUsers = db.Users.ToList();
-            Console.WriteLine($"{"ID",-10} {"Firstname",-30} {"Lastname",-30} {"Mail",-30} {"Phone \n"}");
+            Console.WriteLine($"{"ID",-10} {"Firstname",-30} {"Lastname",-20} {"Mail",-30} {"Phone \n"}");
             foreach (var user in listUsers)
             {
                 
-                Console.WriteLine($"{user.Id,-10} {user.FirstName,-30} {user.LastName,-30} {user.Mail,-30} {user.Phone}");
+                Console.WriteLine($"{user.Id,-10} {user.FirstName,-30} {user.LastName,-20} {user.Mail,-30} {user.Phone}");
             }
         }
 
@@ -68,8 +68,14 @@ namespace FirstDataApp.CRUD
             var users = db.Users.Where(User => User.FirstName.Contains(searcher) || User.LastName.Contains(searcher) || User.Mail.Contains(searcher) || User.Phone.Contains(searcher));
             foreach (var user in users)
             {
-                Console.WriteLine($"{user.Id,-10} {user.FirstName,-30} {user.LastName,-30} {user.Mail,-30} {user.Phone}");
+                Console.WriteLine($"{user.Id,-10} {user.FirstName,-30} {user.LastName,-20} {user.Mail,-30} {user.Phone}");
             }
+        }
+
+        public static string Converter(string phone)
+        {
+            string result = "+" + phone.Substring(0, 2) + " (" + (phone.Substring(2, 3)) + ") " + (phone.Substring(5, 3)) + " " + (phone.Substring(8, 2)) + " " + (phone.Substring(phone.Length - 2));
+            return result;
         }
 
 

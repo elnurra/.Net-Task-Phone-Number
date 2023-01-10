@@ -32,7 +32,7 @@ namespace FirstDataApp.Validation
         public static bool PhoneNumber(string number)
         {
 
-            if (number.Length > 9 && number.Length<12 && HasDigits(number))
+            if (number.Length==12 && HasDigits(number))
             {
                 return true;
             }
